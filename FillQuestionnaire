@@ -1,0 +1,22 @@
+var i;
+
+
+//判斷是否為導師時間
+if (document.getElementById("ctl00_ContentPlaceHolder1_lblSub_name").textContent == "導師時間") {
+    for (i = 1; i <= 9; i++) {
+        document.getElementById("ctl00_ContentPlaceHolder1_0" + i + "_0").checked = true;
+    }
+    document.getElementById("ctl00_ContentPlaceHolder1_10_0").checked = true;
+} else {
+    for (i = 1; i <= 7; i++) {
+        document.getElementById("ctl00_ContentPlaceHolder1_0" + i + "_0").checked = true;
+    }
+    for (i = 1; i <= 4; i++) {
+        document.getElementById("ctl00_ContentPlaceHolder1_A" + i + "_0").checked = true;
+    }
+    document.getElementById("ctl00_ContentPlaceHolder1_03-A_0").checked = true;
+    document.getElementById("ctl00_ContentPlaceHolder1_10_0").checked = true;
+    document.getElementById("ctl00_ContentPlaceHolder1_11_0").checked = true;
+}
+//填寫完成後自動送出
+document.getElementById("ctl00_ContentPlaceHolder1_SubmitPoll").click();
